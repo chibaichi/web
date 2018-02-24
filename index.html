@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>情報一覧</title>
+    <link rel="stylesheet" href="Looks.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <a href="/">
+      <header>
+        <h1>兵庫県防災情報</h1>
+      </header>
+    </a>
+    <article>
+      <table>
+        <table class="responsive">
+
+          <tbody>
+            <tr>
+              <td><div class="thumbnail-container" title="気象警報・注意報">
+                <div class="thumbnail">
+                 <iframe src="http://www.jma.go.jp/jp/warn/332.html#base" frameborder="0" onload="this.style.opacity = 1"></iframe>
+               </div>
+             <td>気象警報・注意報</td></td>
+              <td>   <div class="thumbnail-container" title="ナウキャスト">
+                    <div class="thumbnail">
+                     <iframe src="http://www.jma.go.jp/jp/radnowc/index.html?areaCode=211#base" frameborder="0" onload="this.style.opacity = 1"></iframe>
+                    </div>
+                    <td>ナウキャスト</td>
+                  </div></td>
+            </tr>
+            <tr>
+              <td><div class="thumbnail-container" title="水害メッシュ">
+                <div class="thumbnail">
+                 <iframe src="https://www.jma.go.jp/jp/suigaimesh/flood.html#map" frameborder="0" onload="this.style.opacity = 1"></iframe>
+                </div></td>
+
+                </div>
+                <td>水害メッシュ</td>
+                  <td>  <div class="thumbnail-container" title="リアルタイム危険度情報">
+                      <div class="thumbnail">
+                       <iframe src="http://www.jma.go.jp/jp/warn/f_2821400.html#base" frameborder="0" onload="this.style.opacity = 1"></iframe>
+                      </div>
+                  <td>リアルタイム危険度情報</td>
+                  </div></td>
+              </div></td>
+            </tr>
+          </tbody>
+        </table>
+
+    <footer>Posted by:RC<br>
+//CSS https://qiita.com/kenz_firespeed/items/5cab42ad323913957935 参考にしました
+    </footer>
+  </body>
+</html>
