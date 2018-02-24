@@ -1,0 +1,185 @@
+﻿/* iframeのサムネイル化　
+https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db を参考に*/
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #dddddd;
+  padding: 15px;
+}
+.thumbnail iframe {
+  width: 900px;
+  height: 900px;
+}
+.thumbnail {
+  position: relative;
+  -ms-zoom: 0.25;
+  -moz-transform: scale(0.25);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.25);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.25);
+  -webkit-transform-origin: 0 0;
+}
+/* iframeのimg化（クリックやタッチを無効に）
+https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db */
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.thumbnail-container {
+  width: calc(900px * 0.25);
+  height: calc(900px * 0.25);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+.thumbnail iframe {
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+/* iframeのサムネイル化終わり　
+https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db */
+
+/* responsiveクラス　携帯でも見やすいサムネイル用テーブル見た目
+https://qiita.com/zaru/items/b521d7e2cff708dc074a*/
+@media (max-width: 767px) {
+  .responsive {
+    border-collapse: separate;
+    border-spacing: 0  20px;
+  }
+  .responsive thead {
+    display: none;
+  }
+  .responsive tr {
+    background-color: #f6f6f6;
+  }
+  .responsive td {
+    border: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dddddd;
+  }
+  .responsive td.col-6 {
+    float: center;
+    width: 50%;
+  }
+  .responsive td.txt-right {
+    text-align: center;
+  }
+  .responsive td:before {
+    content: attr(data-title) " ";
+  }
+  .responsive .clear {
+    clear: both;
+  }
+}
+
+/* responsiveクラス終わり　携帯でも見やすいサムネイル用テーブル見た目*/
+div {
+　text-align: center
+}
+/*レスポンシブな見やすいボディやヘッダーやフッターの設定*/
+body{
+        -webkit-text-size-adjust: 100%;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #ccc), color-stop(0.00, #eee));
+        background: -webkit-linear-gradient(#eee, #ccc);
+        background: -moz-linear-gradient(#eee, #ccc);
+        background: -o-linear-gradient(#eee, #ccc);
+        background: -ms-linear-gradient(#eee, #ccc);
+        background: linear-gradient(#eee, #ccc);
+        color:rgba(0, 0, 0, 0.870588);
+        margin:0;
+}
+header{
+        background-color:#009688;
+        color:#fff;
+        padding:0.5em;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+h1{
+        font-size:150%;
+        margin:0;
+}
+a{
+        text-decoration:none;
+}
+h2{
+        color: rgba(0,0,0,0.5);
+        margin: 1em;
+        font-weight:100;
+        font-size: 100%;
+}
+h3{
+        font-size:130%;
+        font-weight:100;
+        color:#009688;
+        margin:0;
+        padding:1em 0 1.5em 0.5em;
+}
+article section, nav ul{
+        background-color:#fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        margin:0.5em 0.5em 1em 0.5em;
+        padding-bottom:2em;
+}
+article a{
+        display:inline-block;
+        padding:0.5em;
+}
+article section p{
+        padding:0.5em 1em;
+}
+.article_image{
+        display:block;
+        margin:auto;
+        max-width:100%;
+}
+nav ul{
+        padding:0;
+}
+nav li{
+        list-style:none;
+        margin:0;
+}
+nav .active p{
+        background-color:#4db6ac;
+        color:white;
+        font-weight:bold;
+}
+nav .active p, nav a{
+        border-bottom:1px solid #eee;
+        margin:0;
+        padding:1em;
+
+}
+nav a{
+        display:block;
+        background-color:#fff;
+        color:#009688;
+        position:relative;
+        transition-duration:0.4s;
+        top:0px;
+        -webkit-tap-highlight-color:rgba(178,223,219,0.4);
+}
+nav a:hover{
+        top:-2px;
+        transition-duration:0.2s;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+footer{
+        text-align:center;
+        background-color:#004d40;
+        color:#fff;
+        padding:1em;
+        margin-top:4em;
+
+}
+
+/*レスポンシブな見やすいボディやヘッダーやフッターの設定終わり*/
